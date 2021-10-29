@@ -1,0 +1,2 @@
+# MineAcademy
+Project for MineAcademy
