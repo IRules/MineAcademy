@@ -1,4 +1,4 @@
-package net.irule.java;
+package net.irules.java;
 
 import java.io.BufferedReader;
 import java.io.IOException;
