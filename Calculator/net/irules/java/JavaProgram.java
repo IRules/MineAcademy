@@ -15,17 +15,17 @@ public class JavaProgram {
 		int secondNumber;
 
 		// BufferReader to read console ( even in IDE conditions )
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
 		//Read all inputs needed
 		System.out.print("Enter First Number: ");
-		firstNumber = Integer.parseInt(br.readLine());
+		firstNumber = Integer.parseInt(bufferedReader.readLine());
 
 		System.out.print("Enter Second Number: ");
-		secondNumber = Integer.parseInt(br.readLine());
+		secondNumber = Integer.parseInt(bufferedReader.readLine());
 
 		System.out.print("Enter Operation ( Multiply, Power, Divide, Subtract, Add ): ");
-		String operation = br.readLine();
+		String operation = bufferedReader.readLine();
 
 		//Based on what you choose you get the result
 		if(operation.equalsIgnoreCase("Multiply")) {
