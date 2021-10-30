@@ -24,28 +24,50 @@ public class JavaProgram {
 		System.out.print("Enter Second Number: ");
 		secondNumber = Integer.parseInt(bufferedReader.readLine());
 
-		System.out.print("Enter Operation ( Multiply, Power, Divide, Subtract, Add ): ");
+		System.out.print("Enter Operation ( Multiply, Power, Divide, Subtract, Add | Default: Add): ");
 		String operation = bufferedReader.readLine();
 
 		//Based on what you choose you get the result
-		if(operation.equalsIgnoreCase("Multiply")) {
-			System.out.print("Result: " + javaProgram.multiply(firstNumber, secondNumber));
-		}
 
-		if(operation.equalsIgnoreCase("Power")) {
-			System.out.println("Result: " + javaProgram.power(firstNumber, secondNumber));
-		}
+		// Old Solution with if statements
+//		if(operation.equalsIgnoreCase("Multiply")) {
+//			System.out.print("Result: " + javaProgram.multiply(firstNumber, secondNumber));
+//		}
+//
+//		if(operation.equalsIgnoreCase("Power")) {
+//			System.out.println("Result: " + javaProgram.power(firstNumber, secondNumber));
+//		}
+//
+//		if(operation.equalsIgnoreCase("Divide")) {
+//			System.out.println("Result: " + javaProgram.divide(firstNumber, secondNumber));
+//		}
+//
+//		if(operation.equalsIgnoreCase("Subtract")) {
+//			System.out.println("Result: " + javaProgram.subtract(firstNumber, secondNumber));
+//		}
+//
+//		if(operation.equalsIgnoreCase("Add")) {
+//			System.out.println("Result: " + javaProgram.add(firstNumber, secondNumber));
+//		}
 
-		if(operation.equalsIgnoreCase("Divide")) {
-			System.out.println("Result: " + javaProgram.divide(firstNumber, secondNumber));
-		}
-
-		if(operation.equalsIgnoreCase("Subtract")) {
-			System.out.println("Result: " + javaProgram.subtract(firstNumber, secondNumber));
-		}
-
-		if(operation.equalsIgnoreCase("Add")) {
-			System.out.println("Result: " + javaProgram.add(firstNumber, secondNumber));
+		//New solution with the switch method
+		switch (operation){
+			case "Multiply":
+				System.out.print("Result: " + javaProgram.multiply(firstNumber, secondNumber));
+				break;
+			case "Power":
+				System.out.println("Result: " + javaProgram.power(firstNumber, secondNumber));
+				break;
+			case "Divide":
+				System.out.println("Result: " + javaProgram.divide(firstNumber, secondNumber));
+				break;
+			case "Subtract":
+				System.out.println("Result: " + javaProgram.subtract(firstNumber, secondNumber));
+				break;
+			case "Add":
+			default:
+				System.out.println("Result: " + javaProgram.add(firstNumber, secondNumber));
+				break;
 		}
 	}
 
