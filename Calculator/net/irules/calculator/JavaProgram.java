@@ -50,7 +50,7 @@ public class JavaProgram {
 //			System.out.println("Result: " + javaProgram.add(firstNumber, secondNumber));
 //		}
 
-		//New solution with the switch method
+		//New solution with the switch statement
 		switch (operation){
 			case "Multiply":
 				System.out.print("Result: " + javaProgram.multiply(firstNumber, secondNumber));
