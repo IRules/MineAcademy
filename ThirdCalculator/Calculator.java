@@ -24,9 +24,7 @@ public class Calculator {
     }
 
     private void loop() throws IOException {
-
-        boolean life = true;
-        while(life) {
+        while(true) {
             String message = reader.readLine();
             double firstNumber = 0, secondNumber = 0;
             String operator = "";
